@@ -16,7 +16,7 @@ export const Header = () => {
                     <button className="btn btn-acce border-none bg-green text-white btn-active hover:bg-lightgreen text-lg font-medium">
                         Creat your CV with AI
                     </button>
-                    <span className="text-xl text-blue">or</span>
+                    <div className="divider divider-horizontal">OR</div>
                     <button className="btn bg-blue border-none text-white hover:bg-lightblue text-lg font-medium ">
                         Log-In to yout account
                     </button>
