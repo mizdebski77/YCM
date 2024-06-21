@@ -1,4 +1,4 @@
-import { Hero } from "./features/hero";
+import { Hero } from "./features/header";
 
 export default function Home() {
   return (
