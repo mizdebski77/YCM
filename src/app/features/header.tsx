@@ -1,6 +1,6 @@
 import background from '../Images/hero.jpg';
 
-export const Hero = () => {
+export const Header = () => {
     return (
         <header style={{
             backgroundImage: `url(${background.src})`,
