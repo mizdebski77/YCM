@@ -7,13 +7,13 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
+    colors: {
+      green: "#57BD34",
+      blue: '#3D4680',
+      white: '#f7f7f7',
+      lightgreen: 'rgba(	87, 189, 52, 0.8)',
+      lightblue: 'rgba(61, 70, 128, 0.8)'
+    }
   },
   plugins: [require('daisyui'),],
 };
