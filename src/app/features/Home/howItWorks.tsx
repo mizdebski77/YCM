@@ -7,7 +7,7 @@ import greenBuble from '../../Images/whiteBuble.svg';
 
 export const HowItWorks = () => {
     return (
-        <section >
+        <section className='relative' >
             <img
                 src={wave.src}
                 alt='wave'
@@ -16,8 +16,8 @@ export const HowItWorks = () => {
 
             <div
                 className='bg-green lg:p-24 p-8 grid md:grid-cols-2 md:gap-24 gap-12 items-start md:mt-[-56px] realtive'>
-                <img src={greenBuble.src} alt='green buble' className='absolute opacity-20 z-0 max-w-[440px] right-[-240px]' />
-                <img src={greenBuble.src} alt='green buble' className='absolute bottom-24 opacity-30   z-0 max-w-[440px] left-[-240px]' />
+                <img src={greenBuble.src} alt='green buble' className='absolute opacity-20 z-0 max-w-[440px] right-[-240px] ' />
+                <img src={greenBuble.src} alt='green buble' className='absolute bottom-[320px] opacity-30   z-0 max-w-[440px] left-[-240px]' />
 
                 <motion.img
                     initial={{ x: '-20%', opacity: 0 }}
