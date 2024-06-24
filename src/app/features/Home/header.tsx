@@ -19,8 +19,8 @@ export const Header = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
                     className="lg:text-7xl sm:text-4xl text-3xl text-blue text-center">
-                    Stand Out in the job Market with our
-                    <span className="text-green">AI - Powered</span> CV Creator</motion.h1>
+                    Stand Out in the job Market with our 
+                    <span className="text-green"> AI - Powered</span> CV Creator</motion.h1>
                 <motion.div
                     initial={{ y: '40%', opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}

@@ -5,7 +5,7 @@ import { OurCreator } from './ourCreator';
 
 export const Hero = () => {
     return (
-        <main className='overflow-x-hidden'>
+        <main className='overflow-x-hidden pb-16'>
             <Header />
             <Informations />
             <HowItWorks />

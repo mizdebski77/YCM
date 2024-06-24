@@ -13,7 +13,7 @@ export const HowItWorks = () => {
                 className=' w-full'
             />
             <div
-                className='bg-green lg:p-24 p-8 grid md:grid-cols-2 md:gap-24 gap-12 items-center md:mt-[-40px]'>
+                className='bg-green lg:p-24 p-8 grid md:grid-cols-2 md:gap-24 gap-12 items-center md:mt-[-56px]'>
                 <motion.img
                     initial={{ x: '-20%', opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
