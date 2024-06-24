@@ -43,6 +43,11 @@ export const HowItWorks = () => {
                     </motion.div>
                 </div>
             </div>
+            <img
+                src={wave.src}
+                alt='wave'
+                className=' w-full rotate-180	'
+            />
         </section>
     );
 };
