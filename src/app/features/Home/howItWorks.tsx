@@ -17,7 +17,7 @@ export const HowItWorks = () => {
                 <motion.img
                     initial={{ x: '-20%', opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
                     src={howItWork.src}
                     alt='how it works'
@@ -25,7 +25,7 @@ export const HowItWorks = () => {
                 <motion.div
                     initial={{ x: '20%', opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
                 >
                     <h2 className='text-center md:text-5xl text-2xl text-white tracking-wide'>How it works?</h2>
