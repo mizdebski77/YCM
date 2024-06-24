@@ -1,5 +1,6 @@
 import background from '../Images/hero.jpg';
 import { Header } from './header';
+import { HowItWorks } from './howItWorks';
 import { Informations } from './informations';
 
 export const Hero = () => {
@@ -7,6 +8,7 @@ export const Hero = () => {
         <main>
             <Header />
             <Informations />
+            <HowItWorks />
         </main>
     )
 }

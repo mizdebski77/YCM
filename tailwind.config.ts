@@ -13,7 +13,7 @@ const config: Config = {
       white: '#f7f7f7',
       lightgreen: 'rgba(	87, 189, 52, 0.8)',
       lightblue: 'rgba(61, 70, 128, 0.8)'
-    }
+    },
   },
   plugins: [require('daisyui'),],
 };
