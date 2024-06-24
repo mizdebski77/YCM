@@ -3,6 +3,7 @@ import { HowItWorks } from './howItWorks';
 import { Informations } from './informations';
 import { OurCreator } from './ourCreator';
 import { Path } from './path';
+import { PhotoSection } from './photoSection';
 
 export const Hero = () => {
     return (
@@ -12,6 +13,7 @@ export const Hero = () => {
             <HowItWorks />
             <OurCreator />
             <Path />
+            <PhotoSection />
         </main>
     )
 }

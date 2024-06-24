@@ -13,7 +13,7 @@ export const HowItWorks = () => {
                 className=' w-full'
             />
             <div
-                className='bg-green lg:p-24 p-8 grid md:grid-cols-2 md:gap-24 gap-12 items-center md:mt-[-56px]'>
+                className='bg-green lg:p-24 p-8 grid md:grid-cols-2 md:gap-24 gap-12 items-start md:mt-[-56px]'>
                 <motion.img
                     initial={{ x: '-20%', opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
@@ -27,9 +27,14 @@ export const HowItWorks = () => {
                     whileInView={{ x: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
+                    className='grid gap-8'
                 >
                     <h2 className='text-center md:text-5xl text-2xl text-white tracking-wide'>How it works?</h2>
                     <p className='md:text-2xl  text-white font-light my-4 text-justify'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ut iure explicabo saepe aperiam, beatae maxime culpa repellendus iste. Perferendis ea consequatur totam incidunt ad nam doloremque architecto repellendus ab? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ut iure explicabo saepe aperiam, beatae maxime culpa repellendus iste. Perferendis ea consequatur totam incidunt ad nam doloremque architecto repellendus ab?</p>
+                    <button
+                        className="btn bg-blue border-none text-white hover:bg-lightblue md:text-lg text-sm font-medium ">
+                        Create Account
+                    </button>
                 </motion.div>
             </div>
         </section>
