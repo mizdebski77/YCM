@@ -15,3 +15,9 @@ export const choseUsData = [
     '🚀 Lorem ipsum soda sribjxaajbc abc acai',
     '🚀 Lorem ipsum soda sribjxaajbc abc acai',
 ];
+
+export const pathData = [
+    { id: 1, text: 'Log in to your account' },
+    { id: 2, text: 'Chose template' },
+    { id: 3, text: 'Find your dreamed job with our CV' },
+];
