@@ -1,8 +1,6 @@
 "use client";
-import AI from '../Images/AI.svg';
-import List from '../Images/List.svg';
-import Bulb from '../Images/bulb.svg';
 import { motion } from "framer-motion"
+import { informationsData } from '../core/arrays';
 
 export const Informations = () => {
     return (
@@ -13,20 +11,26 @@ export const Informations = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.7 }}
         >
-            <div className=" p-6 flex justify-center">
-                <img src={AI.src} alt='AI brain' className='max-w-20' />
-                <span className="card-title">Use <span className='text-green'>AI</span> to create perfect CV</span>
-            </div>
-
-            <div className=" p-6 flex border-x-2 border-green justify-center">
-                <img src={List.src} alt='AI brain' className='max-w-16' />
-                <span className="card-title">20+ <span className='text-green'>CV</span> templates</span>
-            </div>
-
-            <div className=" p-6 flex justify-center">
-                <img src={Bulb.src} alt='AI brain' className='max-w-20' />
-                <span className="card-title">Create your own  <span className='text-green'>CV</span>  template</span>
-            </div>
+            {informationsData.map((information, index) => (
+                <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.7, delay: index * 0.1 }}
+                    className={`p-6 flex justify-center ${index % 2 === 0 ? ' ' : 'border-x-2 border-green'}`}>
+                    <img
+                        src={information.img.src}
+                        alt='AI brain'
+                        className='max-w-20'
+                    />
+                    <span
+                        className="card-title">
+                        {information.preText}
+                        <span className='text-green'>
+                            {information.coloredText}
+                        </span> {information.postText}</span>
+                </motion.div>
+            ))}
         </motion.div>
     )
 }
