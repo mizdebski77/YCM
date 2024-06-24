@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 export const Informations = () => {
     return (
         <motion.div
-            className=" max-w-[90%] bg-base-100 shadow-xl m-auto my-12 grid lg:grid-cols-3 justify-center align-center rounded-3xl"
+            className=" max-w-[90%] bg-base-100 shadow-xl m-auto my-12 grid lg:grid-cols-3 justify-center align-center rounded-3xl "
             initial={{ y: '30%', opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}

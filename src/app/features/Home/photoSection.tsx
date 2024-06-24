@@ -2,11 +2,15 @@
 import React from 'react';
 import img from '../../Images/imageSection.jpg';
 import { motion } from "framer-motion"
+import greenBuble from '../../Images/greenBuble.svg';
+import blueBuble from '../../Images/blueBuble.svg';
 
 export const PhotoSection = () => {
     return (
         <div
-            className='grid md:grid-cols-2 max-w-[80%] md:gap-12 gap-8 m-auto justify-center items-center md:py-32 py-16 px-19'>
+            className='grid md:grid-cols-2 max-w-[80%] md:gap-12 gap-8 m-auto justify-center items-center md:py-32 py-16 px-19 relative'>
+            <img src={greenBuble.src} alt='green buble' className='absolute left-[-150px] z-0 max-w-[420px] top-12' />
+            <img src={blueBuble.src} alt='green buble' className='absolute right-[-150px] z-0 max-w-[320px] top-[-150px]' />
             <motion.div
                 initial={{ x: '-20%', opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
