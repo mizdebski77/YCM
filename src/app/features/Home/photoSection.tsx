@@ -8,7 +8,7 @@ import blueBuble from '../../Images/blueBuble.svg';
 export const PhotoSection = () => {
     return (
         <div
-            className='grid md:grid-cols-2 max-w-[80%] md:gap-12 gap-8 m-auto justify-center items-center md:py-32 py-16 px-19 relative max-w-screen-2xl'>
+            className='grid md:grid-cols-2 md:gap-12 gap-8 m-auto justify-center items-center md:py-32 py-16 px-19 relative max-w-screen-2xl p-4'>
             <img src={greenBuble.src} alt='green buble' className='absolute left-[-150px] z-0 max-w-[420px] top-12' />
             <img src={blueBuble.src} alt='green buble' className='absolute right-[-150px] z-0 max-w-[320px] top-[-150px]' />
             <motion.div
