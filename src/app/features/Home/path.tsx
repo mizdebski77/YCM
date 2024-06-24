@@ -1,15 +1,27 @@
+"use client";
 import { pathData } from '@/app/core/arrays';
 import React from 'react';
+import { motion } from "framer-motion"
 
 export const Path = () => {
     return (
-        <div className='w-full bg-blue p-12 mt-20 shadow-[0_0_20px_#919191] flex justify-around'>
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className='w-full bg-blue lg:p-12 p-6 py-8 mt-20 shadow-[0_0_20px_#919191] md:flex justify-around grid gap-3'>
             {pathData.map((information) => (
-                <div key={information.id} className='flex items-center gap-6'>
-                    <span className='bg-green text-white flex justify-center items-center w-[56px] h-[56px]  rounded-full text-2xl'>{information.id}</span>
-                    <span className='text-white text-2xl font-light'>{information.text}</span>
-                </div>
+                <motion.div
+                    initial={{ y: '50%', opacity: 0 }}
+                    whileInView={{ y: '0%', opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7, delay: information.id * 0.2 }} key={information.id}
+                    className='flex items-center gap-6'>
+                    <span className='bg-green text-white flex justify-center items-center md:w-[56px] md:h-[56px] w-[32px] h-[32px] rounded-full md:text-2xl'>{information.id}</span>
+                    <span className='text-white md:text-2xl font-light'>{information.text}</span>
+                </motion.div>
             ))}
-        </div>
+        </motion.div>
     );
 }; 
