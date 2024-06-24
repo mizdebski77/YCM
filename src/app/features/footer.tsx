@@ -14,7 +14,7 @@ export const Footer = () => {
                     <span>Project and realistaion : <a className='font-bold'>Marcin Izdebski</a></span>
                 </div>
             </nav>
-            <img src={buble.src} alt='footer buble' className='absolute right-0' />
+            <img src={buble.src} alt='footer buble' className='absolute right-0 opacity-40	' />
         </footer>
     );
 };
