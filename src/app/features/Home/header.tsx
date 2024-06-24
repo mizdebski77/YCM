@@ -9,6 +9,8 @@ export const Header = () => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             boxShadow: 'inset 1008px -184px 116px 5px #f7f7f7',
+            maxWidth: '1920px',
+            margin: 'auto'
         }}
             className='md:min-h-[540px] md:p-14 px-12 pt-14 flex justify-start'
         >
@@ -19,7 +21,7 @@ export const Header = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
                     className="lg:text-7xl sm:text-4xl text-3xl text-blue text-center">
-                    Stand Out in the job Market with our 
+                    Stand Out in the job Market with our
                     <span className="text-green"> AI - Powered</span> CV Creator</motion.h1>
                 <motion.div
                     initial={{ y: '40%', opacity: 0 }}

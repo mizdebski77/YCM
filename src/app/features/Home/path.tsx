@@ -10,7 +10,7 @@ export const Path = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className='w-full bg-blue lg:p-12 p-6 py-8 mdz:mt-32 mt-16 shadow-[0_0_20px_#919191] md:flex justify-around grid gap-3 z-10 relative'>
+            className='w-full bg-blue lg:p-12 p-6 py-8 mdz:mt-32 mt-16 shadow-[0_0_20px_#919191] md:flex justify-evenly grid gap-3 z-10 relative '>
             {pathData.map((information) => (
                 <motion.div
                     initial={{ y: '50%', opacity: 0 }}

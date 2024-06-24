@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 export const OurCreator = () => {
     return (
-        <section className='max-w-[90%] shadow-[0_0_20px_#b9b9b9]  rounded-2xl md:p-14 p-8 mdz:mt-32 mt-16 mx-auto grid lg:grid-cols-2 gap-12 items-center'>
+        <section className='max-w-[90%] shadow-[0_0_20px_#b9b9b9]  rounded-2xl md:p-14 p-8 mdz:mt-32 mt-16 mx-auto grid lg:grid-cols-2 gap-12 items-center max-w-screen-2xl'>
             <motion.div
                 initial={{ x: '-20%', opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
