@@ -13,6 +13,7 @@ export const Informations = () => {
         >
             {informationsData.map((information, index) => (
                 <motion.div
+                    key={index}
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}

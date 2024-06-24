@@ -1,6 +1,7 @@
 import { Header } from './header';
 import { HowItWorks } from './howItWorks';
 import { Informations } from './informations';
+import { OurCreator } from './ourCreator';
 
 export const Hero = () => {
     return (
@@ -8,6 +9,7 @@ export const Hero = () => {
             <Header />
             <Informations />
             <HowItWorks />
+            <OurCreator />
         </main>
     )
 }
