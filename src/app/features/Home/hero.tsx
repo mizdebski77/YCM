@@ -4,7 +4,7 @@ import { Informations } from './informations';
 
 export const Hero = () => {
     return (
-        <main>
+        <main className='overflow-x-hidden'>
             <Header />
             <Informations />
             <HowItWorks />

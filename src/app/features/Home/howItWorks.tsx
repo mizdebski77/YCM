@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
-import wave from '../Images/topWave.svg';
-import howItWork from '../Images/howItWorks.jpg';
+import wave from '../../Images/topWave.svg';
+import howItWork from '../../Images/howItWorks.jpg';
 import { motion } from "framer-motion"
 
 export const HowItWorks = () => {

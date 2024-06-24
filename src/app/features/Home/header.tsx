@@ -1,5 +1,5 @@
 "use client";
-import background from '../Images/hero.jpg';
+import background from '../../Images/hero.jpg';
 import { motion } from "framer-motion"
 
 export const Header = () => {

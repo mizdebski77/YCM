@@ -1,6 +1,6 @@
 "use client";
+import { informationsData } from "@/app/core/arrays";
 import { motion } from "framer-motion"
-import { informationsData } from '../core/arrays';
 
 export const Informations = () => {
     return (
