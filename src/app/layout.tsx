@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
-import { Footer } from "./features/footer";
-import xd from './common/Images/icon.svg'
+import { Footer } from "./common/footer";
+import { Navigation } from "./common/navigation";
+
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
@@ -11,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "YCM - Your CV Creator",
+  title: "Your CV Maker",
   description: "Create perfect CV with our AI CV",
 };
 
@@ -23,9 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="./common/Images/icon.svg" /> 
+        <link rel="icon" href="./common/Images/icon.svg" />
       </head>
       <body className={poppins.className}>
+        <Navigation />
         {children}
         <Footer />
       </body>

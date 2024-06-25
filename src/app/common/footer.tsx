@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from '../Images/whiteLogo.svg';
-import buble from '../Images/footerBuble.svg'
+import logo from '../common/Images/whiteLogo.svg';
+import buble from '../common/Images/footerBuble.svg'
+
 export const Footer = () => {
     return (
         <footer className="footer footer-center bg-blue text-primary-content p-8 relative">
