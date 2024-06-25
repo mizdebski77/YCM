@@ -1,4 +1,3 @@
-import { Footer } from '../footer';
 import { Header } from './header';
 import { HowItWorks } from './howItWorks';
 import { Informations } from './informations';
@@ -15,7 +14,6 @@ export const Hero = () => {
             <OurCreator />
             <Path />
             <PhotoSection />
-            <Footer />
         </main>
     )
 }
