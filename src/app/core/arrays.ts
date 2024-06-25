@@ -1,6 +1,6 @@
-import AI from '../Images/AI.svg';
-import List from '../Images/List.svg';
-import Bulb from '../Images/bulb.svg';
+import AI from '../common/Images/AI.svg';
+import List from '../common/Images/List.svg';
+import Bulb from '../common/Images/bulb.svg';
 
 export const informationsData = [
     { img: AI, preText: 'Use  ', coloredText: ' AI', postText: 'to create perfect CV' },
