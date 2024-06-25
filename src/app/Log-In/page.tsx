@@ -1,64 +1,58 @@
 
 import buble from '../common/Images/whiteBuble.svg';
 import loginImg from '../common/Images/login.svg';
+import { FcGoogle } from "react-icons/fc";
+import { ImFacebook2 } from "react-icons/im";
+import { MdEmail } from "react-icons/md";
+import { FaKey } from "react-icons/fa";
 
 export default function LogIn() {
     return (
-        <div className="  min-h-screen grid grid-cols-2 overflow-x-hidden">
-            <div className="hero-content flex-col lg:flex-col justify-center items-center  w-full">
-
-                <div>
-                    <h1 className="text-5xl text-green text-center">LOGIN</h1>
-                    <span className="text-2xl text-blue">Log in to your account and start creating your dream CV</span>
+        <div className="min-h-screen grid md:grid-cols-2 overflow-x-hidden">
+            <div className="m-auto md:p-12 p-4">
+                <div className='mb-10'>
+                    <h1 className="md:text-5xl text-2xl text-green text-center mb-2">LOGIN</h1>
+                    <p className="md:text-3xl text-lg text-blue text-center">Log in to your account and start creating your dream CV</p>
                 </div>
+                <form className="px-4  py-10 md:card-body max-w-2xl w-full shadow-[0_0_20px_#b9b9b9] rounded-2xl grid gap-4 m-auto mb-10">
+                    <label className="input input-bordered flex items-center gap-2">
+                        <MdEmail />
+                        <input type="text" className="grow" placeholder="Email" />
+                    </label>
 
 
-                <div>
+                    <div className="form-control">
 
 
-                    <form className="card-body max-w-2xl shadow-[0_0_20px_#b9b9b9]  rounded-2xl grid gap-4 ">
                         <label className="input input-bordered flex items-center gap-2">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 16 16"
-                                fill="currentColor"
-                                className="h-4 w-4 opacity-70">
-                                <path
-                                    d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
-                                <path
-                                    d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
-                            </svg>
-                            <input type="text" className="grow" placeholder="Email" />
+                            <FaKey />
+                            <input type="password" className="grow" value="password"
+                            />
                         </label>
-
-
-                        <div className="form-control">
-
-
-                            <label className="input input-bordered flex items-center gap-2">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 16 16"
-                                    fill="currentColor"
-                                    className="h-4 w-4 opacity-70">
-                                    <path
-                                        fillRule="evenodd"
-                                        d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
-                                        clipRule="evenodd" />
-                                </svg>
-                                <input type="password" className="grow" value="password" />
-                            </label>
-                            <div className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                <a href="#" className="label-text-alt link link-hover">Create an Account</a>
-                            </div>
+                        <div className="label">
+                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                            <a href="#" className="label-text-alt link link-hover">Create an Account</a>
                         </div>
-                        <div className="form-control">
-                            <button className="btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium m-auto px-24 ">Login</button>
-                        </div>
-                    </form>
+                    </div>
+                    <div className="form-control">
+                        <button className="btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium m-auto px-24 ">Login</button>
+                    </div>
+                </form>
+                <div className='border-t border-[#b8b8b8] '>
+                    <p className='text-center text-blue md:text-2xl text-xl my-6'><span className='font-medium text-green'>Login</span> with others</p>
+
+                    <span className=' max-w-xl m-auto mb-4 flex gap-2 items-center md:text-xl text-lg border-2 border-[#dbdbdb] p-4 rounded-xl justify-center'>
+                        <FcGoogle className='md:text-4xl text-3xl' />
+                        Login with <span className='font-bold'>google</span>
+                    </span>
+
+                    <span className=' max-w-xl m-auto mb-4 flex gap-2 items-center md:text-xl text-lg border-2 border-[#dbdbdb] p-4 rounded-xl justify-center'>
+                        <ImFacebook2 className='md:text-4xl text-3xl text-[#1976d2]' />
+                        Login with <span className='font-bold'>facebook</span>
+                    </span>
                 </div>
             </div>
+
 
             <div className="bg-green relative flex justify-center items-center overflow-hidden">
                 <img src={buble.src} alt='buble' className='max-w-64 absolute top-[-40px] left-[-80px]' />
