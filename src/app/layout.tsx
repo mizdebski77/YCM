@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
 import { Footer } from "./features/footer";
-
+import xd from './common/Images/icon.svg'
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
@@ -22,9 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="./common/Images/icon.svg" /> 
+      </head>
       <body className={poppins.className}>
         {children}
-        <Footer />+
+        <Footer />
       </body>
     </html>
   );
