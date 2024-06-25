@@ -29,16 +29,17 @@ export const Header = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
                     className="md:flex grid items-center justify-center md:gap-5">
-                    <button
+                    <a
                         className="btn btn-acce border-none bg-green text-white btn-active hover:bg-lightgreen md:text-lg text-sm font-medium">
                         Creat your CV with AI
-                    </button>
+                    </a>
                     <span
                         className="divider divider-horizontal md:m-4 my-0 mx-auto">OR</span>
-                    <button
+                    <a
+                        href='/Log-In'
                         className="btn bg-blue border-none text-white hover:bg-lightblue md:text-lg text-sm font-medium ">
                         Log-In to yout account
-                    </button>
+                    </a>
                 </motion.div>
             </div>
 

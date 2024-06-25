@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from '../common/Images/whiteLogo.svg';
 import buble from '../common/Images/footerBuble.svg'
 
