@@ -5,7 +5,7 @@ import { OurCreator } from './ourCreator';
 import { Path } from './path';
 import { PhotoSection } from './photoSection';
 
-export const Hero = () => {
+export default function Home() {
     return (
         <main className='overflow-x-hidden '>
             <Header />

@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import img from '../../common/Images/whyYouSHould.jpg';
+import img from '../common/Images/whyYouSHould.jpg';
 import { choseUsData } from '@/app/core/arrays';
 import { motion } from "framer-motion"
 

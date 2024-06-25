@@ -1,9 +1,9 @@
 "use client";
 import React from 'react';
-import img from '../../common/Images/imageSection.jpg';
+import img from '../common/Images/imageSection.jpg';
 import { motion } from "framer-motion"
-import greenBuble from '../../common/Images/greenBuble.svg';
-import blueBuble from '../../common/Images/blueBuble.svg';
+import greenBuble from '../common/Images/greenBuble.svg';
+import blueBuble from '../common/Images/blueBuble.svg';
 
 export const PhotoSection = () => {
     return (

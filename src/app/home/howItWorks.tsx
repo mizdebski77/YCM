@@ -1,9 +1,9 @@
 "use client";
 import React from 'react';
-import wave from '../../common/Images/topWave.svg';
-import howItWork from '../../common/Images/howItWorks.jpg';
+import wave from '../common/Images/topWave.svg';
+import howItWork from '../common/Images/howItWorks.jpg';
 import { motion } from "framer-motion"
-import greenBuble from '../../common/Images/whiteBuble.svg';
+import greenBuble from '../common/Images/whiteBuble.svg';
 
 export const HowItWorks = () => {
     return (
