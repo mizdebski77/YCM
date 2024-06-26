@@ -7,8 +7,18 @@ import { ImFacebook2 } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
 import { FaKey } from "react-icons/fa";
 import { motion } from "framer-motion"
+import { FaEye } from "react-icons/fa";
+import { useState } from 'react';
+import { FaEyeSlash } from "react-icons/fa";
 
 export default function LogIn() {
+
+    const [visiblePassword, setVisiblePassword] = useState(false);
+
+    const toggleVisibility = () => (
+        setVisiblePassword(!visiblePassword)
+    );
+
     return (
         <div className="min-h-screen grid md:grid-cols-2 overflow-x-hidden">
             <motion.div
@@ -31,8 +41,11 @@ export default function LogIn() {
                     <div className="form-control">
                         <label className="input input-bordered flex items-center gap-2">
                             <FaKey />
-                            <input type="password" className="grow" value="password"
-                            />
+                            <input type={visiblePassword ? 'text' : 'password'} className="grow" value="password" />
+                            <button type='button' onClick={toggleVisibility}>
+                                {visiblePassword ? <FaEyeSlash /> : <FaEye />}
+                            </button>
+
                         </label>
                         <a href="#" className="mt-2 label-text-alt link link-hover">Forgot password?</a>
                     </div>

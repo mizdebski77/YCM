@@ -7,8 +7,15 @@ import { MdEmail } from "react-icons/md";
 import { FaKey } from "react-icons/fa";
 import { motion } from "framer-motion"
 import registerImg from '../common/Images/register.svg';
+import { useState } from 'react';
+import { FaEye } from "react-icons/fa";
 
 export default function Register() {
+    const [visiblePassword, setVisiblePassword] = useState(false);
+
+    const toggleVisibility = () => (
+        setVisiblePassword(!visiblePassword)
+    )
     return (
         <div className="min-h-screen  grid md:grid-cols-2 overflow-x-hidden">
             <motion.div
