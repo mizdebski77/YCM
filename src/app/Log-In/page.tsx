@@ -38,7 +38,7 @@ export default function LogIn() {
                         </label>
                         <div className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                            <a href="#" className="label-text-alt link link-hover">Create an Account</a>
+                            <a href="/Register" className="label-text-alt link link-hover">Create an Account</a>
                         </div>
                     </div>
                     <div className="form-control">
