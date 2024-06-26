@@ -38,7 +38,7 @@ export const Header = () => {
                     <a
                         href='/Log-In'
                         className="btn bg-blue border-none text-white hover:bg-lightblue md:text-lg text-sm font-medium ">
-                        Log-In to yout account
+                        Log-In to your account
                     </a>
                 </motion.div>
             </div>

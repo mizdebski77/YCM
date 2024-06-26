@@ -24,7 +24,7 @@ export default function Register() {
                     <span className='text-white text-5xl font-medium'>Alreayd registered? </span>
                     <a href='/Log-In' className=" btn bg-green border-none text-white hover:bg-lightgreen md:text-md text-sm font-medium mx-auto px-24 z-10 ">Login Panel</a>
                 </div>
-                <img src={registerImg.src} alt='Register' className='max-w-2xl z-10 mx-auto' />
+                <img src={registerImg.src} alt='Register' className='max-w-xl z-10 mx-auto' />
             </motion.div>
 
             <motion.div
