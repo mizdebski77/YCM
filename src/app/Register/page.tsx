@@ -7,15 +7,18 @@ import { MdEmail } from "react-icons/md";
 import { FaKey } from "react-icons/fa";
 import { motion } from "framer-motion"
 import registerImg from '../common/Images/register.svg';
-import { useState } from 'react';
 import { FaEye } from "react-icons/fa";
+import { useState } from 'react';
+import { FaEyeSlash } from "react-icons/fa";
+import { IoMdPerson } from "react-icons/io";
 
 export default function Register() {
     const [visiblePassword, setVisiblePassword] = useState(false);
 
     const toggleVisibility = () => (
         setVisiblePassword(!visiblePassword)
-    )
+    );
+
     return (
         <div className="min-h-screen  grid md:grid-cols-2 overflow-x-hidden">
             <motion.div
@@ -51,20 +54,21 @@ export default function Register() {
 
                 <form className="px-4  py-10 md:card-body max-w-2xl w-full shadow-[0_0_20px_#b9b9b9] rounded-2xl grid gap-4 m-auto mb-10">
                     <label className="input input-bordered flex items-center gap-2">
+                        <IoMdPerson />
+                        <input type='text' placeholder='Name & Surame' className="grow" />
+                    </label>
+
+                    <label className="input input-bordered flex items-center gap-2">
                         <MdEmail />
                         <input type="text" className="grow" placeholder="Email" />
                     </label>
-                    <label className="input input-bordered flex items-center gap-2">
-                        <FaKey />
-                        <input type="password" placeholder='Password' className="grow"
-                        />
-                    </label>
-
 
                     <label className="input input-bordered flex items-center gap-2">
                         <FaKey />
-                        <input type="password" placeholder='Reapeat Password' className="grow"
-                        />
+                        <input type={visiblePassword ? 'text' : 'password'} placeholder='Password' className="grow" />
+                        <button type='button' onClick={toggleVisibility}>
+                            {visiblePassword ? <FaEyeSlash /> : <FaEye />}
+                        </button>
                     </label>
                     <div className="form-control">
                         <button className="btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium m-auto px-24 ">Create Account</button>
