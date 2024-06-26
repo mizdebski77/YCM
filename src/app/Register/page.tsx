@@ -11,24 +11,24 @@ import registerImg from '../common/Images/register.svg';
 export default function Register() {
     return (
         <div className="min-h-screen  grid md:grid-cols-2 overflow-x-hidden">
-            <div className=" relative bg-blue  flex flex-col justify-center items-center overflow-hidden">
+            <motion.div
+                initial={{ x: '-20%', opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className=" relative bg-blue  flex flex-col justify-center items-center overflow-hidden">
                 <img src={buble.src} alt='buble' className='max-w-64 absolute top-[-40px] left-[-80px]' />
                 <img src={buble.src} alt='buble' className='max-w-[400px] absolute top-[240px] right-[-240px]' />
                 <img src={buble.src} alt='buble' className='max-w-[620px] absolute bottom-[-120px] left-[-80px] opacity-35' />
                 <div className='grid justify-center gap-4'>
-                    <span className='text-white text-5xl font-light'>Alreayd registered? </span>
+                    <span className='text-white text-5xl font-medium'>Alreayd registered? </span>
                     <a href='/Log-In' className=" btn bg-green border-none text-white hover:bg-lightgreen md:text-md text-sm font-medium mx-auto px-24 z-10 ">Login Panel</a>
                 </div>
-                <motion.img
-                    initial={{ x: '20%', opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                    src={registerImg.src} alt='Register' className='max-w-2xl z-10 mx-auto' />
-            </div>
+                <img src={registerImg.src} alt='Register' className='max-w-2xl z-10 mx-auto' />
+            </motion.div>
 
             <motion.div
-                initial={{ x: '-20%', opacity: 0 }}
+                initial={{ x: '20%', opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
@@ -56,14 +56,26 @@ export default function Register() {
 
                     <label className="input input-bordered flex items-center gap-2">
                         <FaKey />
-                        <input type="password" placeholder='Password' className="grow"
+                        <input type="password" placeholder='Reapeat Password' className="grow"
                         />
                     </label>
                     <div className="form-control">
                         <button className="btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium m-auto px-24 ">Create Account</button>
                     </div>
                 </form>
+                <div className='border-t border-[#b8b8b8] '>
+                    <p className='text-center text-blue md:text-2xl text-xl my-6'><span className='font-medium text-green'>Register</span> with others</p>
 
+                    <span className='cursor-pointer	 max-w-xl m-auto mb-4 flex gap-2 items-center md:text-xl text-lg border-2 hover:border-green duration-300	 border-[#dbdbdb] p-4 rounded-xl justify-center'>
+                        <FcGoogle className='md:text-4xl text-3xl' />
+                        Register with <span className='font-bold'>google</span>
+                    </span>
+
+                    <span className='cursor-pointer	 max-w-xl m-auto mb-4 flex gap-2 items-center md:text-xl text-lg border-2 hover:border-green duration-300 border-[#dbdbdb] p-4 rounded-xl justify-center'>
+                        <ImFacebook2 className='md:text-4xl text-3xl text-[#1976d2]' />
+                        Register with <span className='font-bold'>facebook</span>
+                    </span>
+                </div>
 
             </motion.div>
         </div >
