@@ -36,10 +36,7 @@ export default function LogIn() {
                             <input type="password" className="grow" value="password"
                             />
                         </label>
-                        <div className="label">
-                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                            <a href="/Register" className="label-text-alt link link-hover">Create an Account</a>
-                        </div>
+                        <a href="#" className="mt-2 label-text-alt link link-hover">Forgot password?</a>
                     </div>
                     <div className="form-control">
                         <button className="btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium m-auto px-24 ">Login</button>
@@ -61,9 +58,15 @@ export default function LogIn() {
             </motion.div>
 
 
-            <div className="bg-green relative flex justify-center items-center overflow-hidden">
+            <div className="bg-green relative flex flex-col justify-center items-center overflow-hidden">
                 <img src={buble.src} alt='buble' className='max-w-64 absolute top-[-40px] left-[-80px]' />
                 <img src={buble.src} alt='buble' className='max-w-[400px] absolute top-[240px] right-[-240px]' />
+
+                <div className='grid justify-center items-center gap-4 mb-8'>
+                    <span className='text-white text-5xl font-medium'>Don't have account? </span>
+                    <a href='/Register' className=" mx-auto btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium mx -auto px-24 z-10">Register</a>
+                </div>
+
                 <img src={buble.src} alt='buble' className='max-w-[620px] absolute bottom-[-120px] left-[-80px] opacity-35' />
                 <motion.img
                     initial={{ x: '20%', opacity: 0 }}
