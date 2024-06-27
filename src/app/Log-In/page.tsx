@@ -28,6 +28,7 @@ export default function LogIn() {
         try {
             await signInWithEmailAndPassword(auth, email, password);
             console.log('User logged in succesfully');
+            window.location.href = '/Profile';
         } catch (error) {
             if (error instanceof Error) {
                 console.log(error.message);
