@@ -20,19 +20,19 @@ export default function Register() {
     );
 
     return (
-        <div className="min-h-screen  grid md:grid-cols-2 overflow-x-hidden">
+        <div className="min-h-screen  flex flex-col-reverse md:grid md:grid-cols-2 overflow-x-hidden ">
             <motion.div
                 initial={{ x: '-20%', opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className=" relative bg-blue  flex flex-col justify-center items-center overflow-hidden">
+                className=" relative bg-blue  flex flex-col justify-center items-center overflow-hidden p-4">
                 <img src={buble.src} alt='buble' className='max-w-64 absolute top-[-40px] left-[-80px]' />
                 <img src={buble.src} alt='buble' className='max-w-[400px] absolute top-[240px] right-[-240px]' />
                 <img src={buble.src} alt='buble' className='max-w-[620px] absolute bottom-[-120px] left-[-80px] opacity-35' />
                 <div className='grid justify-center gap-4'>
-                    <span className='text-white text-5xl font-medium'>Alreayd registered? </span>
-                    <a href='/Log-In' className=" btn bg-green border-none text-white hover:bg-lightgreen md:text-md text-sm font-medium mx-auto px-24 z-10 ">Login Panel</a>
+                    <span className='text-white md:text-5xl  text-2xl font-medium text-ce'>Alreayd registered? </span>
+                    <a href='/Log-In' className=" btn bg-green border-none text-white hover:bg-lightgreen md:text-md text-sm font-medium mx-auto md:px-24 px-12 z-10 ">Login Panel</a>
                 </div>
                 <img src={registerImg.src} alt='Register' className='max-w-xl z-10 mx-auto' />
             </motion.div>
