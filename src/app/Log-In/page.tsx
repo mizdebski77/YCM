@@ -10,14 +10,30 @@ import { motion } from "framer-motion"
 import { FaEye } from "react-icons/fa";
 import { useState } from 'react';
 import { FaEyeSlash } from "react-icons/fa";
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../core/firebase';
 
 export default function LogIn() {
 
     const [visiblePassword, setVisiblePassword] = useState(false);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     const toggleVisibility = () => (
         setVisiblePassword(!visiblePassword)
     );
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+            console.log('User logged in succesfully');
+        } catch (error) {
+            if (error instanceof Error) {
+                console.log(error.message);
+            }
+        }
+    };
 
     return (
         <div className="min-h-screen grid md:grid-cols-2 overflow-x-hidden">
@@ -31,17 +47,29 @@ export default function LogIn() {
                     <h1 className="md:text-5xl text-2xl text-green text-center mb-2">LOGIN</h1>
                     <p className="md:text-3xl text-lg text-blue text-center">Log in to your account and start creating your dream CV</p>
                 </div>
-                <form className="px-4  py-10 md:card-body max-w-2xl w-full shadow-[0_0_20px_#b9b9b9] rounded-2xl grid gap-4 m-auto mb-10">
+                <form
+                    onSubmit={handleSubmit}
+                    className="px-4  py-10 md:card-body max-w-2xl w-full shadow-[0_0_20px_#b9b9b9] rounded-2xl grid gap-4 m-auto mb-10">
                     <label className="input input-bordered flex items-center gap-2">
                         <MdEmail />
-                        <input type="text" className="grow" placeholder="Email" />
+                        <input
+                            type="email"
+                            className="grow"
+                            placeholder="Email"
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
                     </label>
 
 
                     <div className="form-control">
                         <label className="input input-bordered flex items-center gap-2">
                             <FaKey />
-                            <input type={visiblePassword ? 'text' : 'password'} className="grow" value="password" />
+                            <input
+                                type={visiblePassword ? 'text' : 'password'}
+                                className="grow"
+                                placeholder="Password"
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
                             <button type='button' onClick={toggleVisibility}>
                                 {visiblePassword ? <FaEyeSlash /> : <FaEye />}
                             </button>
