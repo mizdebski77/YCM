@@ -74,13 +74,13 @@ export default function LogIn() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className="bg-green relative flex flex-col justify-center items-center overflow-hidden">
+                className="bg-green relative flex flex-col justify-center items-center overflow-hidden p-4">
                 <img src={buble.src} alt='buble' className='max-w-64 absolute top-[-40px] left-[-80px]' />
                 <img src={buble.src} alt='buble' className='max-w-[400px] absolute top-[240px] right-[-240px]' />
 
                 <div className='grid justify-center items-center gap-4 mb-8'>
-                    <span className='text-white text-5xl font-medium'>Don't have account? </span>
-                    <a href='/Register' className=" mx-auto btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium mx -auto px-24 z-10">Register</a>
+                    <span className='text-white md:text-5xl text-2xl font-medium'>Don't have account? </span>
+                    <a href='/Register' className=" mx-auto btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium mx -auto md:px-24 px-12 z-10">Register</a>
                 </div>
 
                 <img src={buble.src} alt='buble' className='max-w-[620px] absolute bottom-[-120px] left-[-80px] opacity-35' />
