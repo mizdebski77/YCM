@@ -8,16 +8,44 @@ import { FaKey } from "react-icons/fa";
 import { motion } from "framer-motion"
 import registerImg from '../common/Images/register.svg';
 import { FaEye } from "react-icons/fa";
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth, db } from '../core/firebase';
+import { setDoc, doc } from 'firebase/firestore';
+
 
 export default function Register() {
     const [visiblePassword, setVisiblePassword] = useState(false);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     const toggleVisibility = () => (
         setVisiblePassword(!visiblePassword)
     );
+
+    const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        try {
+            await createUserWithEmailAndPassword(auth, email, password,);
+            const user = auth.currentUser;
+            console.log("User Registered");
+            if (user) {
+                await setDoc(doc(db, 'Users', user.uid), {
+                    email: user.email,
+                    name: name,
+                });
+            }
+        } catch (error) {
+            if (error instanceof Error) {
+                console.log(error.message);
+            } else {
+                console.log("An unknown error occurred");
+            }
+        }
+    }
 
     return (
         <div className="min-h-screen  flex flex-col-reverse md:grid md:grid-cols-2 overflow-x-hidden ">
@@ -43,29 +71,44 @@ export default function Register() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
                 className="m-auto md:p-12 p-4 ">
-
                 <div className='mb-10'>
                     <h1 className="md:text-5xl text-2xl text-green text-center mb-2">Create Account</h1>
                     <p className="md:text-3xl text-lg text-blue text-center">Join us and start creating your dream CV</p>
                 </div>
-                <div>
-                    <h2></h2>
-                </div>
 
-                <form className="px-4  py-10 md:card-body max-w-2xl w-full shadow-[0_0_20px_#b9b9b9] rounded-2xl grid gap-4 m-auto mb-10">
+
+                <form
+                    className="px-4  py-10 md:card-body max-w-2xl w-full shadow-[0_0_20px_#b9b9b9] rounded-2xl grid gap-4 m-auto mb-10"
+                    onSubmit={handleRegister}
+                >
                     <label className="input input-bordered flex items-center gap-2">
                         <IoMdPerson />
-                        <input type='text' placeholder='Name & Surame' className="grow" />
+                        <input
+                            type='text'
+                            placeholder='Name & Surame'
+                            className="grow"
+                            onChange={(e) => setName(e.target.value)}
+                        />
                     </label>
 
                     <label className="input input-bordered flex items-center gap-2">
                         <MdEmail />
-                        <input type="text" className="grow" placeholder="Email" />
+                        <input
+                            type="text"
+                            className="grow"
+                            placeholder="Email"
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
                     </label>
 
                     <label className="input input-bordered flex items-center gap-2">
                         <FaKey />
-                        <input type={visiblePassword ? 'text' : 'password'} placeholder='Password' className="grow" />
+                        <input
+                            type={visiblePassword ? 'text' : 'password'}
+                            placeholder='Password'
+                            className="grow"
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
                         <button type='button' onClick={toggleVisibility}>
                             {visiblePassword ? <FaEyeSlash /> : <FaEye />}
                         </button>
