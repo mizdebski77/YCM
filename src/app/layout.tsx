@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import "./globals.css";
 import { Footer } from "./common/footer";
 import { Navigation } from "./common/navigation";
+import StoreProvider from "./core/store/storeProvider";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -22,15 +23,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="./common/Images/icon.svg" />
-      </head>
-      <body className={poppins.className}>
-        <Navigation />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <StoreProvider>
+      <html lang="en">
+        <head>
+          <link rel="icon" href="./common/Images/icon.svg" />
+        </head>
+        <body className={poppins.className}>
+          <Navigation />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </StoreProvider>
   );
 }
