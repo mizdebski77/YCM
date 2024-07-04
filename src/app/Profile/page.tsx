@@ -54,50 +54,53 @@ export default function Profile() {
             <div className=' shadow-[0_0_20px_#b9b9b9] rounded-2xl md:p-14 p-8 mt-12 mx-auto '>
                 {userDetails ? (
                     <div className=" grid grid-cols-[1fr,2fr]">
-                        <div className="max-w-52   rounded-full sticky overflow-hidden shadow-[0_0_20px_#b9b9b9]">
-                            <img src={account.src} alt="account" className="m-auto w-full relative" />
-                            {/* <div className="border-r-2">{userDetails.name}</div> */}
-
+                        <div>
+                            <div className="max-w-52 w-full  h-52  rounded-full sticky overflow-hidden shadow-[0_0_20px_#b9b9b9]">
+                                <img src={account.src} alt="account" className="m-auto w-full relative" />
+                                {/* <div className="border-r-2">{userDetails.name}</div> */}
+                            </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4 px-4">
-                            <label className="input input-bordered flex items-center gap-2">
-                                <IoPersonOutline />
-                                <input
-                                    type="name"
-                                    className="grow"
-                                    placeholder="Name"
-                                />
-                            </label>
+                        <div>
+                            <div className="grid grid-cols-2 gap-4 px-4">
+                                <label className="input input-bordered flex items-center gap-2">
+                                    <IoPersonOutline />
+                                    <input
+                                        type="name"
+                                        className="grow"
+                                        placeholder="Name"
+                                    />
+                                </label>
 
-                            <label className="input input-bordered flex items-center gap-2">
-                                <MdOutlinePersonAddAlt />
-                                <input
-                                    type="name"
-                                    className="grow"
-                                    placeholder="Last Name"
-                                />
-                            </label>
+                                <label className="input input-bordered flex items-center gap-2">
+                                    <MdOutlinePersonAddAlt />
+                                    <input
+                                        type="name"
+                                        className="grow"
+                                        placeholder="Last Name"
+                                    />
+                                </label>
 
-                            <label className="input input-bordered flex items-center gap-2">
-                                <FaCity />
-                                <input
-                                    type="text"
-                                    className="grow"
-                                    placeholder="City"
-                                />
-                            </label>
+                                <label className="input input-bordered flex items-center gap-2">
+                                    <FaCity />
+                                    <input
+                                        type="text"
+                                        className="grow"
+                                        placeholder="City"
+                                    />
+                                </label>
 
-                            <label className="input input-bordered flex items-center gap-2">
-                                <MdEmail />
-                                <input
-                                    type="email"
-                                    className="grow"
-                                    placeholder="Email"
-                                />
-                            </label>
+                                <label className="input input-bordered flex items-center gap-2">
+                                    <MdEmail />
+                                    <input
+                                        type="email"
+                                        className="grow"
+                                        placeholder="Email"
+                                    />
+                                </label>
 
 
+                            </div>
                         </div>
                     </div>
                 ) : (
