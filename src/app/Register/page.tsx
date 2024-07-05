@@ -14,6 +14,7 @@ import { IoMdPerson } from "react-icons/io";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../core/firebase';
 import { setDoc, doc } from 'firebase/firestore';
+import { FaCity } from "react-icons/fa";
 
 
 export default function Register() {
@@ -21,6 +22,8 @@ export default function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [city, setCity] = useState('');
 
     const toggleVisibility = () => (
         setVisiblePassword(!visiblePassword)
@@ -36,6 +39,8 @@ export default function Register() {
                 await setDoc(doc(db, 'Users', user.uid), {
                     email: user.email,
                     name: name,
+                    lastName: lastName,
+                    city: city,
                 });
             }
         } catch (error) {
@@ -81,15 +86,38 @@ export default function Register() {
                     className="px-4  py-10 md:card-body max-w-2xl w-full shadow-[0_0_20px_#b9b9b9] rounded-2xl grid gap-4 m-auto mb-10"
                     onSubmit={handleRegister}
                 >
+
+                    <div className='flex justify-between'>
+                        <label className="input input-bordered flex items-center gap-2">
+                            <IoMdPerson />
+                            <input
+                                type='text'
+                                placeholder='Name'
+                                className="grow w-full"
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                        </label>
+                        <label className="input input-bordered flex items-center gap-2">
+                            <IoMdPerson />
+                            <input
+                                type='text'
+                                placeholder='Last Name'
+                                className="grow"
+                                onChange={(e) => setLastName(e.target.value)}
+                            />
+                        </label>
+                    </div>
+
                     <label className="input input-bordered flex items-center gap-2">
-                        <IoMdPerson />
+                        <FaCity />
                         <input
                             type='text'
-                            placeholder='Name & Surame'
+                            placeholder='City'
                             className="grow"
-                            onChange={(e) => setName(e.target.value)}
+                            onChange={(e) => setCity(e.target.value)}
                         />
                     </label>
+
 
                     <label className="input input-bordered flex items-center gap-2">
                         <MdEmail />
