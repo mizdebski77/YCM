@@ -4,6 +4,8 @@ import "./globals.css";
 import { Footer } from "./common/footer";
 import { Navigation } from "./common/navigation";
 import StoreProvider from "./core/store/storeProvider";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -24,6 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <StoreProvider>
+
       <html lang="en">
         <head>
           <link rel="icon" href="./common/Images/icon.svg" />
@@ -32,6 +35,18 @@ export default function RootLayout({
           <Navigation />
           {children}
           <Footer />
+          <ToastContainer
+            position="top-center"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover={false}
+            theme="colored"
+          />
         </body>
       </html>
     </StoreProvider>

@@ -15,6 +15,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../core/firebase';
 import { setDoc, doc } from 'firebase/firestore';
 import { FaCity } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 
 export default function Register() {
@@ -29,12 +30,14 @@ export default function Register() {
         setVisiblePassword(!visiblePassword)
     );
 
+    const notify = () => toast.success('Usser re')
+
     const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
             await createUserWithEmailAndPassword(auth, email, password,);
             const user = auth.currentUser;
-            console.log("User Registered");
+            toast.success('User Registered')
             if (user) {
                 await setDoc(doc(db, 'Users', user.uid), {
                     email: user.email,
@@ -45,9 +48,9 @@ export default function Register() {
             }
         } catch (error) {
             if (error instanceof Error) {
-                console.log(error.message);
+                toast.info('Email already in use')
             } else {
-                console.log("An unknown error occurred");
+                toast.error("An unknown error occurred. Try again later!")
             }
         }
     }
