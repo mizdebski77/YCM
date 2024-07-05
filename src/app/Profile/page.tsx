@@ -10,7 +10,9 @@ import { FaCity } from "react-icons/fa";
 
 interface UserDetails {
     name: string;
-    email: string
+    email: string;
+    lastName: string;
+    city: string;
 };
 
 export default function Profile() {
@@ -69,6 +71,7 @@ export default function Profile() {
                                         type="name"
                                         className="grow"
                                         placeholder="Name"
+                                        value={`${userDetails ? userDetails.name : ' '}`}
                                     />
                                 </label>
 
@@ -78,6 +81,7 @@ export default function Profile() {
                                         type="name"
                                         className="grow"
                                         placeholder="Last Name"
+                                        value={`${userDetails ? userDetails.lastName : ' '}`}
                                     />
                                 </label>
 
@@ -87,6 +91,7 @@ export default function Profile() {
                                         type="text"
                                         className="grow"
                                         placeholder="City"
+                                        value={`${userDetails ? userDetails.city : ' '}`}
                                     />
                                 </label>
 
@@ -96,10 +101,9 @@ export default function Profile() {
                                         type="email"
                                         className="grow"
                                         placeholder="Email"
+                                        value={`${userDetails ? userDetails.email : ' '}`}
                                     />
                                 </label>
-
-
                             </div>
                         </div>
                     </div>

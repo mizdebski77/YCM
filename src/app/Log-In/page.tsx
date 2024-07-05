@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { FaEyeSlash } from "react-icons/fa";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../core/firebase';
+import { toast } from 'react-toastify';
 
 export default function LogIn() {
 
@@ -27,12 +28,11 @@ export default function LogIn() {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            console.log('User logged in succesfully');
-            window.location.href = '/Profile';
-            
+            toast.success('User logged in succesfully');
+            window.location.href = '/Profile'
         } catch (error) {
             if (error instanceof Error) {
-                console.log(error.message);
+                toast.error(error.message);
             }
         }
     };
