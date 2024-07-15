@@ -58,6 +58,7 @@ export default function LogIn() {
                             type="email"
                             className="grow"
                             placeholder="Email"
+                            required
                             onChange={(e) => setEmail(e.target.value)}
                         />
                     </label>
@@ -67,6 +68,7 @@ export default function LogIn() {
                         <label className="input input-bordered flex items-center gap-2">
                             <FaKey />
                             <input
+                                required
                                 type={visiblePassword ? 'text' : 'password'}
                                 className="grow"
                                 placeholder="Password"
