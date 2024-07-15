@@ -94,6 +94,7 @@ export default function Register() {
                         <label className="input input-bordered flex items-center gap-2">
                             <IoMdPerson />
                             <input
+                                required
                                 type='text'
                                 placeholder='Name'
                                 className="grow w-full"
@@ -103,6 +104,7 @@ export default function Register() {
                         <label className="input input-bordered flex items-center gap-2">
                             <IoMdPerson />
                             <input
+                                required
                                 type='text'
                                 placeholder='Last Name'
                                 className="grow"
@@ -114,6 +116,7 @@ export default function Register() {
                     <label className="input input-bordered flex items-center gap-2">
                         <FaCity />
                         <input
+                            required
                             type='text'
                             placeholder='City'
                             className="grow"
@@ -125,7 +128,8 @@ export default function Register() {
                     <label className="input input-bordered flex items-center gap-2">
                         <MdEmail />
                         <input
-                            type="text"
+                            required
+                            type="email"
                             className="grow"
                             placeholder="Email"
                             onChange={(e) => setEmail(e.target.value)}
@@ -135,6 +139,7 @@ export default function Register() {
                     <label className="input input-bordered flex items-center gap-2">
                         <FaKey />
                         <input
+                            required
                             type={visiblePassword ? 'text' : 'password'}
                             placeholder='Password'
                             className="grow"

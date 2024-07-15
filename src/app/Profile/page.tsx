@@ -7,13 +7,8 @@ import account from '../common/Images/account.jpg';
 import { IoPersonOutline } from "react-icons/io5";
 import { MdOutlinePersonAddAlt } from "react-icons/md";
 import { FaCity } from "react-icons/fa";
+import { UserDetails } from "../core/intrface";
 
-interface UserDetails {
-    name: string;
-    email: string;
-    lastName: string;
-    city: string;
-};
 
 export default function Profile() {
     const [userDetails, setUserDetails] = useState<UserDetails | null>(null);
