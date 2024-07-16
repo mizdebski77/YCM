@@ -7,7 +7,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from "./core/store/store";
 import { decrement, increment, selectCount } from "./counterslice";
-import { Header } from "./Home/header";
 
 export default function Home() {
     const count = useSelector((state: RootState) => selectCount(state));
@@ -15,7 +14,7 @@ export default function Home() {
 
     return (
         <main className='overflow-x-hidden '>
-            <Header/>
+            Witam
             {/* <Informations />
             <HowItWorks />
             <OurCreator />
