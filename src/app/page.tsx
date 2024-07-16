@@ -9,7 +9,7 @@ import { decrement, increment, selectCount } from "./counterslice";
 // import { Informations } from "./Home/informations";
 // import Header from "./Home/header";
 import LogIn from "./Log-In/page";
-import Header from './Home/page';
+import Header from './Home/header';
 
 export default function Home() {
     const count = useSelector((state: RootState) => selectCount(state));
