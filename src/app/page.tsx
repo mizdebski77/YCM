@@ -9,6 +9,7 @@ import { decrement, increment, selectCount } from "./counterslice";
 // import { Informations } from "./Home/informations";
 // import Header from "./Home/header";
 import LogIn from "./Log-In/page";
+import Header from './Home/page';
 
 export default function Home() {
     const count = useSelector((state: RootState) => selectCount(state));
@@ -16,7 +17,7 @@ export default function Home() {
 
     return (
         <main className='overflow-x-hidden '>
-            <LogIn />
+            <Header />
             {/* <Informations />
             <HowItWorks />
             <OurCreator />
