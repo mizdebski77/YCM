@@ -1,6 +1,7 @@
 "use client";
 import { informationsData } from "@/app/core/arrays";
 import { motion } from "framer-motion"
+import Image from "next/image";
 
 export const Informations = () => {
     return (
@@ -20,7 +21,7 @@ export const Informations = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, delay: index * 0.1 }}
                         className={`p-6 flex justify-center items-center gap-4 ${index % 2 === 0 ? ' ' : 'lg:border-y-0 border-y-2 lg:border-x-2 border-green'}`}>
-                        <img
+                        <Image
                             src={information.img.src}
                             alt='AI brain'
                             className='md:max-w-20 max-w-12 '

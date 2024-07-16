@@ -1,7 +1,7 @@
 
 "use client";
 import buble from '../common/Images/whiteBuble.svg';
-import loginImg from '../common/Images/login.svg';
+import loginImage from '../common/Images/login.svg';
 import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
@@ -13,6 +13,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../core/firebase';
 import { toast } from 'react-toastify';
+import Image from 'next/image';
 
 export default function LogIn() {
 
@@ -107,16 +108,16 @@ export default function LogIn() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
                 className="bg-green relative flex flex-col justify-center items-center overflow-hidden p-4">
-                <img src={buble.src} alt='buble' className='max-w-64 absolute top-[-40px] left-[-80px]' />
-                <img src={buble.src} alt='buble' className='max-w-[400px] absolute top-[240px] right-[-240px]' />
+                <Image src={buble.src} alt='buble' className='max-w-64 absolute top-[-40px] left-[-80px]' />
+                <Image src={buble.src} alt='buble' className='max-w-[400px] absolute top-[240px] right-[-240px]' />
 
                 <div className='grid justify-center items-center gap-4 mb-8'>
                     <span className='text-white md:text-5xl text-2xl font-medium'>Don't have account? </span>
                     <a href='/Register' className=" mx-auto btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium mx -auto md:px-24 px-12 z-10">Register</a>
                 </div>
 
-                <img src={buble.src} alt='buble' className='max-w-[620px] absolute bottom-[-120px] left-[-80px] opacity-35' />
-                <img src={loginImg.src} alt='Log in' className='max-w-2xl z-10' />
+                <Image src={buble.src} alt='buble' className='max-w-[620px] absolute bottom-[-120px] left-[-80px] opacity-35' />
+                <Image src={loginImage.src} alt='Log in' className='max-w-2xl z-10' />
             </motion.div>
 
         </div >
