@@ -2,7 +2,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from "./core/store/store";
 import { decrement, increment, selectCount } from "./counterslice";
-import Hero from './Home/page';
+import Profile from './Profile/page';
+import LogIn from './Log-In/page';
+import Register from './Register/page';
 
 export default function Home() {
     const count = useSelector((state: RootState) => selectCount(state));
@@ -10,7 +12,9 @@ export default function Home() {
 
     return (
         <main className='overflow-x-hidden '>
-            <Hero />
+            <Profile />
+            <LogIn />
+            <Register />
             <div>
                 <button onClick={() => dispatch(increment())}>+</button>
                 <span>{count}</span>
