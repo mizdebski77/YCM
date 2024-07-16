@@ -2,7 +2,7 @@
 // import { HowItWorks } from "./Home/howItWorks";
 // import { OurCreator } from "./Home/ourCreator";
 // import { Path } from "./Home/path";
-// import { PhotoSection } from "./Home/photoSection";
+    // import { PhotoSection } from "./Home/photoSection";
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from "./core/store/store";
 import { decrement, increment, selectCount } from "./counterslice";
