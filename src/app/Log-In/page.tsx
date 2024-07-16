@@ -108,16 +108,16 @@ export default function LogIn() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
                 className="bg-green relative flex flex-col justify-center items-center overflow-hidden p-4">
-                <Image src={buble.src} alt='buble' className='max-w-64 absolute top-[-40px] left-[-80px]' />
-                <Image src={buble.src} alt='buble' className='max-w-[400px] absolute top-[240px] right-[-240px]' />
+                <img src={buble.src} alt='buble' className='max-w-64 absolute top-[-40px] left-[-80px]' />
+                <img src={buble.src} alt='buble' className='max-w-[400px] absolute top-[240px] right-[-240px]' />
 
                 <div className='grid justify-center items-center gap-4 mb-8'>
-                    <span className='text-white md:text-5xl text-2xl font-medium'>Don't have account? </span>
+                    <span className='text-white md:text-5xl text-2xl font-medium'>Don&apos;t have account? </span>
                     <a href='/Register' className=" mx-auto btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium mx -auto md:px-24 px-12 z-10">Register</a>
                 </div>
 
-                <Image src={buble.src} alt='buble' className='max-w-[620px] absolute bottom-[-120px] left-[-80px] opacity-35' />
-                <Image src={loginImage.src} alt='Log in' className='max-w-2xl z-10' />
+                <img src={buble.src} alt='buble' className='max-w-[620px] absolute bottom-[-120px] left-[-80px] opacity-35' />
+                <img src={loginImage.src} alt='Log in' className='max-w-2xl z-10' />
             </motion.div>
 
         </div >

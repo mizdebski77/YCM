@@ -39,12 +39,12 @@ export const Navigation = () => {
         <nav className="navbar bg-[#f7f7f7] sticky top-0 z-20 px-12 py-4 flex justify-between">
             <div className="flex justify-between ">
                 <a href='/' className="text-xl">
-                    <Image src={logo.src} alt='logo' />
+                    <img src={logo.src} alt='logo' />
                 </a>
             </div>
             <div>
                 <a className='flex items-center gap-3' href='/Profile'>
-                    <Image src={profile.src} className='max-w-8' alt='profile' />
+                    <img src={profile.src} className='max-w-8' alt='profile' />
                     {userDetails ? userDetails.name : ' '}
                 </a>
             </div>
