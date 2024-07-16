@@ -51,11 +51,12 @@ export default function Profile() {
             <div className=' shadow-[0_0_20px_#b9b9b9] rounded-2xl md:p-14 p-8 mt-12 mx-auto '>
                 {userDetails ? (
                     <div className=" grid grid-cols-[1fr,2fr]">
-                        <div>
+                        <div className="grid justify-center">
                             <div className="max-w-52 w-full  h-52  rounded-full sticky overflow-hidden shadow-[0_0_20px_#b9b9b9]">
                                 <img src={account.src} alt="account" className="m-auto w-full relative" />
-                                {/* <div className="border-r-2">{userDetails.name}</div> */}
+                                {/* <div className="border-r-2">{userDetails.name}</div> */}\
                             </div>
+                            <button onClick={handleLogout} className="btn mt-4 bg-red text-white px-12 float-center hover:bg-lightRed">Log out</button>
                         </div>
 
                         <div>
@@ -105,6 +106,7 @@ export default function Profile() {
                 ) : (
                     <p>Loading...</p>
                 )}
+
             </div>
         </div>
 

@@ -9,6 +9,8 @@ const config: Config = {
   theme: {
     colors: {
       green: "#57BD34",
+      red: "#d6331c",
+      lightRed: '#f56651',
       blue: '#3D4680',
       white: '#f7f7f7',
       lightgreen: 'rgba(	87, 189, 52, 0.8)',
