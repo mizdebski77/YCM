@@ -2,7 +2,7 @@
 import background from '../common/Images/hero.jpg';
 import { motion } from "framer-motion"
 
-export const Header = () => {
+export default function Header() {
     return (
         <header style={{
             backgroundImage: `url(${background.src})`,
