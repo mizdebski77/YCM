@@ -5,6 +5,7 @@ import { decrement, increment, selectCount } from "./counterslice";
 import Profile from './Profile/page';
 import LogIn from './Log-In/page';
 import Register from './Register/page';
+import Header from './Home/header';
 
 export default function Home() {
     const count = useSelector((state: RootState) => selectCount(state));
@@ -14,7 +15,7 @@ export default function Home() {
         <main className='overflow-x-hidden '>
             <Profile />
             <LogIn />
-            <Register />
+            <Header />
             <div>
                 <button onClick={() => dispatch(increment())}>+</button>
                 <span>{count}</span>
