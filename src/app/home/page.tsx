@@ -2,7 +2,7 @@
 
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from '../core/store/store';
-import Header from './header';
+import Header from './Header';
 import { Informations } from './informations';
 import { HowItWorks } from './howItWorks';
 

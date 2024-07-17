@@ -5,7 +5,7 @@ import { decrement, increment, selectCount } from "./counterslice";
 import Profile from './Profile/page';
 import LogIn from './Log-In/page';
 import Register from './Register/page';
-import Header from './Home/header';
+import Header from './Home/Header/page';
 
 export default function Home() {
     const count = useSelector((state: RootState) => selectCount(state));
