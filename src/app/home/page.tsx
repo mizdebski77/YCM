@@ -2,9 +2,9 @@
 
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from '../core/store/store';
-import Header from './Header';
 import { Informations } from './informations';
 import { HowItWorks } from './howItWorks';
+import Header from './Header/page';
 
 
 export default function Hero() {
