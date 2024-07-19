@@ -44,6 +44,7 @@ export default function Register() {
                     name: name,
                     lastName: lastName,
                     city: city,
+                    photo: '',
                 });
             }
         } catch (error) {
@@ -153,7 +154,7 @@ export default function Register() {
                         <button className="btn bg-blue border-none text-white hover:bg-lightblue md:text-md text-sm font-medium m-auto px-24 ">Create Account</button>
                     </div>
                 </form>
-                <div className='border-t border-[#b8b8b8] '>
+                {/* <div className='border-t border-[#b8b8b8] '>
                     <p className='text-center text-blue md:text-2xl text-xl my-6'><span className='font-medium text-green'>Register</span> with others</p>
 
                     <span className='cursor-pointer	 max-w-xl m-auto mb-4 flex gap-2 items-center md:text-xl text-lg border-2 hover:border-green duration-300	 border-[#dbdbdb] p-4 rounded-xl justify-center'>
@@ -165,7 +166,7 @@ export default function Register() {
                         <ImFacebook2 className='md:text-4xl text-3xl text-[#1976d2]' />
                         Register with <span className='font-bold'>facebook</span>
                     </span>
-                </div>
+                </div> */}
 
             </motion.div>
         </div >

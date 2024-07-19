@@ -10,7 +10,7 @@ import { motion } from "framer-motion"
 import { FaEye } from "react-icons/fa";
 import { useState } from 'react';
 import { FaEyeSlash } from "react-icons/fa";
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth } from '../core/firebase';
 import { toast } from 'react-toastify';
 import Image from 'next/image';
@@ -37,6 +37,18 @@ export default function LogIn() {
             }
         }
     };
+
+    const googleLogin = () => {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider).then(async (result) => {
+            console.log(result);
+            if (result.user) {
+                toast.success('User logged in succesfully');
+                window.location.href = '/Profile'
+            }
+        })
+    };
+
 
     return (
         <div className="min-h-screen grid md:grid-cols-2 overflow-x-hidden">
@@ -89,10 +101,12 @@ export default function LogIn() {
                 <div className='border-t border-[#b8b8b8] '>
                     <p className='text-center text-blue md:text-2xl text-xl my-6'><span className='font-medium text-green'>Login</span> with others</p>
 
-                    <span className='cursor-pointer	 max-w-xl m-auto mb-4 flex gap-2 items-center md:text-xl text-lg border-2 hover:border-green duration-300	 border-[#dbdbdb] p-4 rounded-xl justify-center'>
+                    <button
+                        onClick={googleLogin}
+                        className='cursor-pointer	max-w-xl m-auto mb-4 flex gap-2 items-center md:text-xl text-lg border-2 hover:border-green duration-300 border-[#dbdbdb] py-4 px-20 rounded-xl justify-center'>
                         <FcGoogle className='md:text-4xl text-3xl' />
                         Login with <span className='font-bold'>google</span>
-                    </span>
+                    </button>
 
                     <span className='cursor-pointer	 max-w-xl m-auto mb-4 flex gap-2 items-center md:text-xl text-lg border-2 hover:border-green duration-300 border-[#dbdbdb] p-4 rounded-xl justify-center'>
                         <ImFacebook2 className='md:text-4xl text-3xl text-[#1976d2]' />

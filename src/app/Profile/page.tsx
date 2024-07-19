@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { auth, db } from "../core/firebase";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { MdEmail } from "react-icons/md";
 import account from '../common/Images/account.jpg';
 import { IoPersonOutline } from "react-icons/io5";
@@ -13,9 +13,18 @@ import { UserDetails } from "../core/intrface";
 export default function Profile() {
     const [userDetails, setUserDetails] = useState<UserDetails | null>(null);
 
+
     const fetchUserData = async () => {
         auth.onAuthStateChanged(async (user) => {
             if (user) {
+                await setDoc(doc(db, 'Users', user.uid), {
+                    email: user.email,
+                    name: user.displayName,
+                    city: '',
+                    photo: '',
+                    lastName: '',
+                });
+                setUserDetails(user);
                 console.log(user);
                 const docRef = doc(db, 'Users', user.uid);
                 const docSnap = await getDoc(docRef);
@@ -43,7 +52,10 @@ export default function Profile() {
         } catch (error) {
             console.log('Something went wrong');
         }
-    }
+    };
+
+    console.log(userDetails);
+
 
     return (
         <div className="min-h-screen max-w-5xl mx-auto py-24">
