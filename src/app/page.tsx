@@ -43,8 +43,9 @@ export default function Home() {
                         transition={{ duration: 0.7 }}
                         className="md:flex grid items-center justify-center md:gap-5">
                         <a
+                            href='/Creator'
                             className="btn btn-acce border-none bg-green text-white btn-active hover:bg-lightgreen md:text-lg text-sm font-medium">
-                            Creat your CV with AI
+                            Create your CV with AI
                         </a>
                         <span
                             className="divider divider-horizontal md:m-4 my-0 mx-auto">OR</span>
