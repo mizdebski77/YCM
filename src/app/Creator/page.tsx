@@ -204,6 +204,33 @@ export default function Creator() {
                     </div>
                 </div>
 
+                <div className="shadow-[0_0_20px_#b9b9b9] p-8 ">
+                    <span className="text-3xl">Languages</span>
+                    <form className="rounded-2xl grid  gap-4 mt-4">
+                        <div className="flex">
+                            <input
+                                type="text"
+                                placeholder="Language Name"
+                                className="input input-bordered w-full "
+                            />
+                            <select className="select select-bordered  max-w-[240px]">
+                                <option disabled selected>Chose level</option>
+                                <option>A1</option>
+                                <option>A2</option>
+                                <option>B1</option>
+                                <option>B2</option>
+                                <option>C1</option>
+                                <option>C2</option>
+                            </select>
+                        </div>
+
+
+                        <button className="btn max-w-xs m-auto bg-blue px-12 text-white hover:bg-lightblue">Add Language</button>
+
+
+                    </form>
+                </div>
+
 
 
 
