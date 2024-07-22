@@ -171,10 +171,38 @@ export default function Creator() {
                     </form>
                 </div>
 
+                <div className="shadow-[0_0_20px_#b9b9b9] p-8 ">
+                    <span className="text-3xl">Clause</span>
+                    <form className="rounded-2xl grid  gap-4 mt-4">
 
+                        <div >
+                            <ReactQuill theme="snow" style={{ background: 'white', }} />
+                        </div>
+                    </form>
+                </div>
 
+                <div className="shadow-[0_0_20px_#b9b9b9] p-8 ">
+                    <span className="text-3xl">Interests</span>
+                    <form className="rounded-2xl flex  gap-4 mt-4">
+                        <input
+                            type="text"
+                            placeholder="Skill Name"
+                            className="input input-bordered w-full "
+                        />
+                        <button className="btn max-w-xs m-auto bg-blue px-12 text-white hover:bg-lightblue">Add Skill</button>
+                    </form>
 
+                    <div className="mt-4">
+                        <fieldset className="border rounded-lg p-4">
+                            <legend className="text-xl">Your Skills</legend>
 
+                            <span className="bg-green px-6 py-1 rounded-xl text-white relative">
+                                <span>React</span>
+                                <button className="absolute bg-red text-white w-[20px] h-[20px] rounded-full text-xs bottom-[20px] right-[-8px] duration-300 hover:bg-lightRed">x</button>
+                            </span>
+                        </fieldset>
+                    </div>
+                </div>
 
 
 
