@@ -161,6 +161,18 @@ export default function Creator() {
                 </div>
 
 
+                <div className="shadow-[0_0_20px_#b9b9b9] p-8 ">
+                    <span className="text-3xl">Summary</span>
+                    <form className="rounded-2xl grid  gap-4 mt-4">
+
+                        <div >
+                            <ReactQuill theme="snow" style={{ background: 'white', }} />
+                        </div>
+                    </form>
+                </div>
+
+
+
 
 
 
